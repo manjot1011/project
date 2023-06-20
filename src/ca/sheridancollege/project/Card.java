@@ -14,6 +14,21 @@ package ca.sheridancollege.project;
  */
 public abstract class Card {
     //default modifier for child classes
+    private final String rank;
+    private final String suit;
+
+    public Card(String rank, String suit) {
+        this.rank = rank;
+        this.suit = suit;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public String getSuit() {
+        return suit;
+    }
 
     /**
      * Students should implement this method for their specific children classes
@@ -21,6 +36,8 @@ public abstract class Card {
      * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
      */
     @Override
-    public abstract String toString();
+    public abstract String toString() {
+        return rank + " of " + suit;
+    }
 
 }
