@@ -14,14 +14,14 @@ import java.util.Scanner;
  * @author manjot
  */
 
-public class UnoGame extends Game {
+public class UNOGame extends Game {
 
     private GroupOfCards deck;
     private ArrayList<UNOCard> discardPile;
     private String currentColor;
     private boolean skipNextTurn = false;
 
-    public UnoGame(String name) {
+    public UNOGame(String name) {
         
         super(name);
         deck = new GroupOfCards(108); // Uno deck has 108 cards
@@ -203,5 +203,4 @@ public class UnoGame extends Game {
         }
         return score;
     }
-}
 }

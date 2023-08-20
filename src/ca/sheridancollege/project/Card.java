@@ -12,24 +12,7 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author manjot June 2023
  */
-public class UNOPlayer extends Player {
-    private ArrayList<UNOCard> hand;
-
-    public UNOPlayer(String name) {
-        super(name);
-        hand = new ArrayList<>();
-    }
-
-    public void drawCard(UNOCard card) {
-        hand.add(card);
-    }
-
-    public ArrayList<UNOCard> getHand() {
-        return hand;
-    }
-
+public abstract class Card {
     @Override
-    public void play() {
-
-    }
+    public abstract String toString();
 }
