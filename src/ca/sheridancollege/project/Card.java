@@ -12,32 +12,24 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author manjot June 2023
  */
-public abstract class Card {
-    //default modifier for child classes
-    private final String rank;
-    private final String suit;
+public class UNOPlayer extends Player {
+    private ArrayList<UNOCard> hand;
 
-    public Card(String rank, String suit) {
-        this.rank = rank;
-        this.suit = suit;
+    public UNOPlayer(String name) {
+        super(name);
+        hand = new ArrayList<>();
     }
 
-    public String getRank() {
-        return rank;
+    public void drawCard(UNOCard card) {
+        hand.add(card);
     }
 
-    public String getSuit() {
-        return suit;
+    public ArrayList<UNOCard> getHand() {
+        return hand;
     }
 
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
     @Override
-    public abstract String toString() {
-        return rank + " of " + suit;
-    }
+    public void play() {
 
+    }
 }

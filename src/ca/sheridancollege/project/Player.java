@@ -46,5 +46,8 @@ public abstract class Player {
      * with logic to play your game.
      */
     public abstract void play();
+    
+    void drawCard(UNOCard unoCard) {
+    }
 
 }

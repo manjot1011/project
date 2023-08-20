@@ -24,6 +24,7 @@ public class GroupOfCards {
 
     public GroupOfCards(int size) {
         this.size = size;
+        cards = new ArrayList<>();
     }
 
     /**

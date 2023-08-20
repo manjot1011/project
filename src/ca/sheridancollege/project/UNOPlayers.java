@@ -4,20 +4,29 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
 /**
  *
  * @author manjot
  */
-public class UnoCard extends Card {
-    private String color;
-    private String value;
-    public UnoCard(String color, String value) {
-        this.color = color;
-        this.value = value;
+public class UNOPlayer extends Player {
+    private ArrayList<UNOCard> hand;
+
+    public UNOPlayer(String name) {
+        super(name);
+        hand = new ArrayList<>();
+    }
+
+    public void drawCard(UNOCard card) {
+        hand.add(card);
+    }
+
+    public ArrayList<UNOCard> getHand() {
+        return hand;
     }
 
     @Override
-    public String toString() {
-        return color + " " + value;
+    public void play() {
+
     }
 }
